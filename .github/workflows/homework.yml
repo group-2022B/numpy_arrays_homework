@@ -6,7 +6,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: pip install numpy
 
       # Checkout the repository
       - name: Checkout the repository
@@ -16,13 +15,18 @@ jobs:
           repository: codeschooluz/numpy_arrays_test
           token: ${{secrets.TEST_KEY}}
           path: test
+
       - name: Install dependencies
         uses: actions/setup-python@v2
         with:
           python-version: "3.9"
       - name: Install pytest
         run: |
-          pip install pytest
+          pip3 install numpy
+          pip3 install pytest
+          ls
+          ls test
       - name: Run tests
+
         run: |
           pytest -v --tb=no -q
