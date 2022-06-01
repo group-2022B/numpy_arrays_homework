@@ -7,7 +7,7 @@ def main():
 
     """
     # return np.full((3, 8), fill_value=0)
-    return np.zeros((3, 8))
+    return np.zeros((8, 3))
 
 
 # print(main())
