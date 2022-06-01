@@ -7,3 +7,6 @@ def main():
 
     """
     return np.full((3, 8), fill_value=0)
+
+
+print(main())
